@@ -1,0 +1,162 @@
+@font-face {
+    font-family: grotex;
+    src: url(./ClashGrotesk_Complete/Fonts/OTF/ClashGrotesk-Bold.otf);
+    font-weight: 800;
+
+}
+
+@font-face {
+    font-family: grotexmeduim;
+    src: url(./ClashGrotesk_Complete/Fonts/OTF/ClashGrotesk-Medium.otf);
+    font-weight: 500;
+
+}
+
+@font-face {
+    font-family: grotexlight;
+    src: url(./ClashGrotesk_Complete/Fonts/OTF/ClashGrotesk-Regular.otf);
+    font-weight: 400;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    width: 100vw;
+    height: 100%;
+}
+
+a,li{
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    color: inherit;
+}
+body{
+    font-family: 'grotexmeduim';
+    font-weight: 500;
+}
+
+
+.text-custom-darkblue{
+    color:  rgba(16, 24, 40, 1);
+    
+}
+
+.text-custom-mid-blue{
+    color: rgba(4, 27, 62, 1);
+}
+
+.h-15{
+    height: 30px;
+}
+.h-17{
+    height: 50px;
+}
+.h-16{
+    height: 20px;
+}
+.w-15{
+    width: 140px;
+}
+
+.w-16{
+    width: 80px;
+
+}
+.w-14{
+    width: 90px;
+}
+
+.h-60{
+    height: 70%;
+}
+
+.h-55{
+    height: 40%;
+}
+.h-44{
+    height: 45%;
+}
+.fs-15{
+    font-size: 15px;
+}
+
+
+.mt-6{
+    margin-top: 10rem;
+}
+
+.text-custom-orange{
+    color: rgba(255, 106, 0, 1);
+}
+
+.bg-custom-orange{
+    background-color:rgba(255, 106, 0, 1) ;
+}
+.text-custom-gray{
+    color: rgba(100, 116, 139, 1);
+}
+
+.bg-custom-gray{
+    background: rgba(249, 249, 249, 1);
+}
+.pt-6{
+    padding-top: 40px;
+}
+.ps-6{
+    padding-left: 36px;
+}
+
+.pe-6{
+    padding-right: 60px;
+}
+
+.text-custom-blue{
+    color: rgb(5, 6, 7);
+}
+.h-30{
+    height: 227px;
+}
+
+.h-40{
+    height: 17rem;
+}
+
+.w-85{
+    width: 95%;
+}
+
+#overflow{
+    overflow: scroll;
+}
+#overflow::-webkit-scrollbar{
+display: none;
+}
+
+
+.mt-7{
+    margin-top: 3%;
+}
+  
+  @media (max-width: 767px) {
+  
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .h-40{
+        height: 20rem;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .h-40{
+        height: 19rem;
+    }
+  }
+  
+  
