@@ -55,7 +55,7 @@ body{
     height: 30px;
 }
 .h-17{
-    height: 50px;
+    height: 40px;
 }
 .h-16{
     height: 20px;
@@ -65,7 +65,7 @@ body{
 }
 
 .w-16{
-    width: 80px;
+    width: 70px;
 
 }
 .w-14{
@@ -150,12 +150,18 @@ display: none;
 
 .d-flex1{
     display: flex;
+    flex-wrap: wrap;
 }
 
-  
+.position-absolute1 {
+    position: absolute; 
+    top: 0;            
+    right: 0;          
+}
+
 @media (max-width: 968px)  {
     .responsive-width{
-        width: 45%;
+        width: 50%;
     }
   }
 
@@ -169,8 +175,9 @@ display: none;
   @media (max-width: 1504px) and  (min-width: 1000px) {
     .d-flex1{
         display: flex;
-        flex-wrap: wrap;
+       
     }
+  
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -186,5 +193,12 @@ display: none;
     }
   }
   
+@media (min-width:991px) and (max-width:1135px){
+    .position-absolute1 {
+        position: absolute; 
+        top: 30px;            
+        right: 0;          
+    }
+}
 
   

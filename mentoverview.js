@@ -6,7 +6,7 @@ let currentIndex = 0;
 let firstMessage = `
     <div class="" >
         <div class="d-flex justify-content-between">
-            <h5  class="text-custom-gray  ">#1 Tips for Success</h5>
+            <h5  class="text-custom-gray ">#1 Tips for Success</h5>
         </div>
         <div>
             <h3 class="fw-semibold fs-6 fs-lg-3  mt-4">
