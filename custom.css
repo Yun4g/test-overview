@@ -142,15 +142,42 @@ display: none;
 .mt-7{
     margin-top: 3%;
 }
+
+
+.responsive-width{
+    width: 30.5%;
+}
+
+.d-flex1{
+    display: flex;
+}
+
   
-  @media (max-width: 767px) {
-  
+@media (max-width: 968px)  {
+    .responsive-width{
+        width: 45%;
+    }
+  }
+
+  @media (max-width: 563px) {
+    .responsive-width{
+        width: 100%;
+    }
+    
+  }
+
+  @media (max-width: 1504px) and  (min-width: 1000px) {
+    .d-flex1{
+        display: flex;
+        flex-wrap: wrap;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
     .h-40{
         height: 20rem;
     }
+
   }
   
   @media (min-width: 1025px) {
@@ -159,4 +186,5 @@ display: none;
     }
   }
   
+
   
