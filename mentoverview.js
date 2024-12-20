@@ -1,95 +1,74 @@
-let carouselContainer = document.querySelector('.carouselContainer');
+let monthAndYear = document.querySelector('.month1-year1');
 
-let contentArray = [];
-let currentIndex = 0;
-
-let firstMessage = `
-    <div class="" >
-        <div class="d-flex justify-content-between">
-            <h5  class="text-custom-gray ">#1 Tips for Success</h5>
-        </div>
-        <div>
-            <h3 class="fw-semibold fs-6 fs-lg-3  mt-4">
-                How to prepare for your first meeting?
-            </h3>
-            <p class="text-custom-gray">
-                Plan an agenda! Plan out the questions and topics you'd like to discuss. If you'd like to work together on long-term goals, set some time to discuss expectations for each other.
-            </p>
-        </div>
-    </div>
-`;
-
-let secondMessage = `
-    <div class="">
-        <div class="d-flex justify-content-between">
-            <h5 class="text-custom-gray ">#2 Tips for Success</h5>
-        </div>
-        <div>
-            <h3 class="fw-semibold fs-6 fs-lg-3 mt-4">
-               What should we talk about during our meeting?
-            </h3>
-            <p class="text-custom-gray">
-              Learn about each other's backgrounds to see if there's a fit. You can discuss your goals, challenges, recent successes, or a specific topic you need help with - it's up to you.
-            </p>
-        </div>
-    </div>
-`;
-
-let thirdMessage = `
-    <div class="">
-        <div class="d-flex justify-content-between">
-            <h5 class="text-custom-gray">#3 Tips for Success</h5>
-        </div>
-        <div>
-            <h3 class="fw-semibold fs-6 fs-lg-3 mt-4">
-                Be on time!
-            </h3>
-            <p class="text-custom-gray">
-               You'll receive multiple reminders for your session, don't be late! Get off to a good start by showing up on time.
-            </p>
-        </div>
-    </div>
-`;
-
-let fourthMessage = `
-    <div class="">
-        <div class="d-flex justify-content-between">
-            <h5 class="text-custom-gray">#4 Tips for Success</h5>
-        </div>
-        <div>
-            <h3 class="fw-semibold fs-6 fs-lg-3 mt-4">
-           After the session, stay connected!
+let newDate = new Date();
+    
+    let currentMonthInWord = newDate.toLocaleString('default', { month: 'long' });
+    let currentYear = newDate.getFullYear();    
+    monthAndYear.innerHTML = `<h5 class="box bg-white rounded-1">${currentMonthInWord}</h5> <h5 class="box bg-white rounded-1">${currentYear}</h5>`;
 
 
-            </h3>
-            <p class="text-custom-gray">
-               After your session, don't be a stranger! Keep your mentor updated on your progress - they're more invested in your success than you think!
-                </p>
-        </div>
-    </div>
-`;
 
-contentArray = [firstMessage, secondMessage, thirdMessage, fourthMessage];
+function generateDatesByDay(year, month) {
+    const daysOfWeek = ["Sun", "Mo", "Tue", "Wed", "Thur", "Fri", "Sat"];
+    const calendarDiv = document.getElementById("calendar");
 
+    // Create a column for each day of the week
+    daysOfWeek.forEach(day => {
+      const colDiv = document.createElement("div");
+     
+      colDiv.innerHTML = `<h4 class="fs-modal">${day}</h4>`;
+      colDiv.id = day.toLowerCase();
+      calendarDiv.appendChild(colDiv);
+    });
 
-updatecarouselContainer();
+    // Loop through the days of the month
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    for (let date = 1; date <= daysInMonth; date++) {
+      const currentDate = new Date(year, month, date);
+      const dayName = daysOfWeek[currentDate.getDay()];
 
-const nextContent = () => {
-    currentIndex = (currentIndex + 1) % contentArray.length; 
-    updatecarouselContainer();
-};
-
-const previousContent = () => {
-    currentIndex = (currentIndex - 1 + contentArray.length) % contentArray.length; 
-    updatecarouselContainer();
-};
-
-// Function to update the carousel container
-function updatecarouselContainer() {
-    if (carouselContainer) {
-        carouselContainer.innerHTML = contentArray[currentIndex]; 
-    } else {
-        console.error("Carousel container not found");
+      // Add the date under the corresponding day column
+      const dayColumn = document.getElementById(dayName.toLowerCase());
+      const dateElement = document.createElement("div");
+      dateElement.textContent = date;
+      dayColumn.appendChild(dateElement);
+      
     }
+  }
+
+  generateDatesByDay(2024, 11);
+
+
+  let container = document.querySelector('.overlay1 ');
+
+  let step1 = document.querySelector('#step1');
+  let step2 = document.querySelector('#step2');
+  let step3 = document.querySelector('#step3');
+  let step4 = document.querySelector('#step4');
+console.log(step1)
+console.log(step2)
+console.log(step3)
+
+const changeOne =()=>{
+  step1.style.display = 'none'
+  step2.style.display = 'flex'
+  step3.style.display = 'none'
+  step4.style.display = 'none'
+
 }
 
+const changeTwo =()=>{
+  step1.style.display = 'none'
+  step2.style.display = 'none'
+  step3.style.display = 'flex'
+  step4.style.display = 'none'
+ 
+}
+
+const changeThree =()=>{
+  step1.style.display = 'none'
+  step2.style.display = 'none'
+  step3.style.display = 'none'
+step4.style.display = 'flex'
+ 
+}
